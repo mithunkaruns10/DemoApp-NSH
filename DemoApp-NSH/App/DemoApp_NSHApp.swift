@@ -11,7 +11,7 @@ import SwiftUI
 struct DemoApp_NSHApp: App {
     var body: some Scene {
         WindowGroup {
-            Text()
+           RootTabView()
         }
     }
 }
