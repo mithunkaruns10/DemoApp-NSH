@@ -29,7 +29,7 @@ nonisolated enum LabReportMapper {
             title: name(of: report.code),
             date: date(from: report),
             performer: performer(from: report),
-            obsercations: observations
+            observations: observations
         )
     }
     

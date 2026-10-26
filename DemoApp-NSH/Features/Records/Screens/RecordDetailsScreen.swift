@@ -17,7 +17,7 @@ struct RecordDetailsScreen: View {
             VStack(spacing: 15) {
                 DetailsScreenTopSectionView(labReport: labReport)
                 Divider()
-                DetailsScreenBottomSectionView(observations: labReport.obsercations)
+                DetailsScreenBottomSectionView(observations: labReport.observations)
             }
             .padding(.horizontal, 15)
         }
@@ -34,7 +34,7 @@ struct RecordDetailsScreen: View {
             title: "Test",
             date: Date(),
             performer: "ABC Lab",
-            obsercations: [
+            observations: [
                 .init(
                     id: "",
                     name: "Ob1",

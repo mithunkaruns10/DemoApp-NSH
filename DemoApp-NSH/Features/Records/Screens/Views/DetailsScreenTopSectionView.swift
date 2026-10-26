@@ -47,7 +47,7 @@ private struct DetailsField: View {
             title: "Test",
             date: Date(),
             performer: "ABC Lab",
-            obsercations: [
+            observations: [
                 .init(
                     id: "",
                     name: "Ob1",

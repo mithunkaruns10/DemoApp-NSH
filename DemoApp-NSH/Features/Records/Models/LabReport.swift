@@ -13,5 +13,5 @@ nonisolated struct LabReport: Identifiable, Sendable, Hashable {
     let title: String
     let date:  Date?
     let performer: String?
-    let obsercations: [LabObservation]
+    let observations: [LabObservation]
 }

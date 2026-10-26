@@ -7,78 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93831F76-5103-483F-9E94-E2E3E2EB40CF"
+            uuid = "9D55325B-A189-4232-AC80-B5F0723ABC3C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DemoApp-NSH/Features/Records/ViewModels/RecordsViewModel.swift"
+            filePath = "DemoApp-NSHTests/RecordsViewModelTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "load()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loadDiagnosticReport()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9DD08EF4-BDE9-426B-80B2-C8DC6AE58EDD"
+            uuid = "A8BA3D3B-9279-4C5E-8DE9-1FC900AC9B5B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DemoApp-NSH/Network/Report.swift"
+            filePath = "DemoApp-NSHTests/RecordsViewModelTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "parse(_:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadDiagnosticReport()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9DD08EF4-BDE9-426B-80B2-C8DC6AE58EDD - bae1328f6bf4ddba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static DemoApp_NSH.Report.parse(Foundation.Data) throws -&gt; DemoApp_NSH.Report"
-                  moduleName = "DemoApp-NSH.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mithunkarunsuma/Desktop/DemoApp-NSH/DemoApp-NSH/Network/Report.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "9DD08EF4-BDE9-426B-80B2-C8DC6AE58EDD - bae1328f6bf4ddba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static DemoApp_NSH.Report.parse(Foundation.Data) throws -&gt; DemoApp_NSH.Report"
-                  moduleName = "DemoApp-NSH.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mithunkarunsuma/Desktop/DemoApp-NSH/DemoApp-NSH/Network/Report.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED8D6ED9-2CD0-4940-8F5B-D2CAAA00F65E"
+            uuid = "F3E692A8-2287-4A54-84A3-415F2939BC0E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DemoApp-NSH/Network/Report.swift"
+            filePath = "DemoApp-NSHTests/RecordsViewModelTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "parse(_:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "loadDiagnosticReport()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

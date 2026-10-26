@@ -44,7 +44,7 @@ struct LabAndDiagnosticItem: View {
             title: "Test",
             date: Date(),
             performer: "ABC Lab",
-            obsercations: [.init(
+            observations: [.init(
                 id: "",
                 name: "Ob1",
                 value: "test",
