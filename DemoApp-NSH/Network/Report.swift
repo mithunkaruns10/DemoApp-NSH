@@ -57,3 +57,12 @@ nonisolated extension FHIRFetching {
        try Report.parse(try await data(from: url))
     }
 }
+
+//MARK: Mock for Unit testing
+nonisolated struct MockReportFetching: FHIRFetching {
+    let result: Result<Data, any Error>
+    func data(from url: URL) async throws -> Data {
+        try result.get()
+    }
+    
+}
