@@ -7,19 +7,23 @@
 
 import SwiftUI
 
+//MARK: Record Details Screen
 struct RecordDetailsScreen: View {
     let labReport: LabReport
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
-            ScrollView {
-                VStack(spacing: 15) {
-                    DetailsScreenTopSectionView(labReport: labReport)
-                    Divider()
-                    DetailsScreenBottomSectionView(observations: labReport.obsercations)
-                }
-                .padding(.horizontal, 15)
+        ScrollView {
+            VStack(spacing: 15) {
+                DetailsScreenTopSectionView(labReport: labReport)
+                Divider()
+                DetailsScreenBottomSectionView(observations: labReport.obsercations)
             }
-            .navigationTitle("Complete blood count")
-            .navigationBarTitleDisplayMode(.inline)
+            .padding(.horizontal, 15)
+        }
+        .navigationBar(title: "Complete blood count", isDetails: true)
+        .navigationBarBackButtonHidden(true)
+        .appBackButton()
     }
 }
 

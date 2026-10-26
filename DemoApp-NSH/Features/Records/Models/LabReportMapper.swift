@@ -8,6 +8,7 @@
 import ModelsR4
 import Foundation
 
+//MARK: Mapper from FHIRModels to App level models
 nonisolated enum LabReportMapper {
     static func reports(from results: Report) -> [LabReport] {
         let observations = observationsById(results.observations)

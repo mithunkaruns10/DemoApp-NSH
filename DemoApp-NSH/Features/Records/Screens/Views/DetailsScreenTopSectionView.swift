@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: Details Screen - top section
 struct DetailsScreenTopSectionView: View {
     let labReport: LabReport
     var body: some View {
@@ -30,10 +31,11 @@ private struct DetailsField: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.headline)
+                .foregroundColor(.primaryTextColor)
+                .font(.header)
             Text(value)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.primaryTextColor)
+                .font(.subHeader)
         }
     }
 }

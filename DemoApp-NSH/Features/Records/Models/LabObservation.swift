@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//MARK:  Observation Model for UI
 nonisolated struct LabObservation: Identifiable, Hashable, Sendable {
     let id: String
     let name: String

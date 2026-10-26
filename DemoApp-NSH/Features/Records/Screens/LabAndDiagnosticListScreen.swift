@@ -7,26 +7,43 @@
 
 import SwiftUI
 
+//MARK:  Lab and Diagnostic Screen
 struct LabAndDiagnosticListScreen: View {
     @State private var viewModel = RecordsViewModel()
     @Binding var path: [AppRoute]
+    @Environment(\.dismiss) private var dismiss
+    @State private var showAlert = false
+    
     var body: some View {
         ScrollView {
-            Content(
+            MainContent(
                 path: $path,
                 state: viewModel.state
             )
+            .onChange(of: viewModel.state, perform: { state in
+                if  case .failed = state { showAlert = true }
+            })
             .onAppear {
                 Task { await viewModel.load() }
             }
         }
-        .navigationTitle("Lab and Diagnostics")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBar(title: "Lab and Diagnostics", isDetails: true)
+        .appBackButton()
+        .alert("Error", isPresented: $showAlert) {
+            Button("Retry") {
+                Task { await viewModel.load() }
+            }
+            Button("Cancel", role: .cancel, action: {})
+        } message: {
+            if case let .failed(message) = viewModel.state {
+                Text(message)
+            }
+        }
     }
 }
 
 //MARK: - Screen main content
-struct Content: View {
+struct MainContent: View {
     @Binding var path: [AppRoute]
     let state: AppUIState<[LabReport]>
     
@@ -45,20 +62,19 @@ struct Content: View {
                         path.append(.recordsDetails(report: report))
                     }
                     .padding(.horizontal, 15)
-                    .padding(.top, 30)
                 }
                 HStack {
                     Spacer(minLength: 15)
                     Text("End of results")
-                        .font(.subheadline.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(Color.gray)
+                        .font(.subHeader.bold())
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 15)
                     Spacer(minLength: 15)
                 }
             }
             
-        case let .failed(message):
+        case .failed(_):
             EmptyView()
         }
     }

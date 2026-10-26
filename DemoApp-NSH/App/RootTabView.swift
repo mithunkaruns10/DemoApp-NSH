@@ -14,11 +14,24 @@ struct RootTabView: View {
     
     var body: some View {
         TabView(selection: $tabSelection) {
+            ///Home Screen
             HomeScreen()
-                .tabItem { Label(AppTab.home.title, systemImage: tabSelection == .home ? AppIcon.TabIcon.home : AppIcon.TabIcon.homeSelected) }
+                .tabItem {
+                        Image(tabSelection == .home ? AppIcon.TabIcon.homeSelected :  AppIcon.TabIcon.home)
+                        .renderingMode(tabSelection == .home ? .template : .original)
+                        .tint(tabSelection == .home ? Color.appColor : Color.appBlackColor)
+                        Text(AppTab.home.title)
+                }
                 .tag(AppTab.home)
+            
+            ///Records Screen
             RecordsScreen()
-                .tabItem { Label(AppTab.records.title, systemImage: tabSelection == .records ? AppIcon.TabIcon.record : AppIcon.TabIcon.recordSelected) }
+                .tabItem {
+                    Image(tabSelection == .records ? AppIcon.TabIcon.recordSelected :  AppIcon.TabIcon.record)
+                        .renderingMode(tabSelection == .records ? .template : .original)
+                        .tint(tabSelection == .records ? Color.appColor : Color.appBlackColor)
+                    Text(AppTab.records.title)
+                }
                 .tag(AppTab.records)
         }
         .tint(.appColor)

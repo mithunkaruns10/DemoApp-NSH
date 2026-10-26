@@ -7,29 +7,30 @@
 
 import SwiftUI
 
+//MARK:  Record Screen - card
 struct RecordsListItem: View {
     let onTap: ()-> Void
+    
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "cup.and.saucer.fill")//Icon change
-                .font(.title2)
-                .foregroundStyle(.white)
+            Image(AppIcon.lab)
+                .resizable()
                 .frame(width: 44, height: 44)
-                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 10))
             VStack(alignment: .leading, spacing: 2) {
                 Text("Lab and Diagnostic")
-                    .font(.headline)
+                    .foregroundColor(.primaryTextColor)
+                    .font(.header)
                 Text("Result for blood, urine, and general lab")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .font(.subHeader)
+                    .foregroundColor(.appBlackColor)
             }
             Spacer(minLength: 0)
         }
         .contentShape(Rectangle())
         .onTapGesture { onTap() }
-        .padding(12)
+        .padding(15)
         .background(.background, in: RoundedRectangle(cornerRadius: 16))
-        .shadow(color: .black.opacity(0.12), radius: 8, x: 0, y: 4)
+        .shadow(color: .black.opacity(0.08), radius: 5, x: 0, y: 4)
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//MARK:  Diagnostic Report Model for UI
 nonisolated struct LabReport: Identifiable, Sendable, Hashable {
     let id:  String
     let title: String

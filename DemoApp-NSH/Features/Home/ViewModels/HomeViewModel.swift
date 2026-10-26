@@ -8,11 +8,12 @@
 import Foundation
 import Observation
 
-
+//MARK: Home ViewModel
+@Observable
 final class  HomeViewModel: Sendable {
     private(set) var state: AppUIState<Home> = .loading
     
-    init(state: AppUIState<Home> = .loaded(.init(title: "Demp App"))) {
+    init(state: AppUIState<Home> = .loaded(.init(title: "Demo App"))) {
         self.state = state
     }
 }

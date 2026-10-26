@@ -12,9 +12,12 @@ struct AppIcon {
     
     //MARK: RootTab
     struct TabIcon {
-        static let home = "house"
-        static let homeSelected = "house.fill"
-        static let record = "folder.badge.person.crop"
-        static let recordSelected = "folder.badge.person.crop.fill"
+        static let home = "home"
+        static let homeSelected = "homeSelected"
+        static let record = "records"
+        static let recordSelected = "recordsSelected"
     }
+    
+    static let lab = "lab"
+    static let back = "arrow.backward"
 }

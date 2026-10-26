@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: Lab and Diagnostic Screen - card
 struct LabAndDiagnosticItem: View {
     let labReport: LabReport
     let onTap: ()-> Void
@@ -16,13 +17,15 @@ struct LabAndDiagnosticItem: View {
             VStack(alignment: .leading, spacing: 15) {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(labReport.title)
-                        .font(.headline)
+                        .foregroundColor(.primaryTextColor)
+                        .font(.header.bold())
                     Text("Diagnostic Report")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.appGreyColor)
+                        .font(.subHeader.bold())
                 }
                 Text(labReport.date?.toMMMMddyyyyFormat ?? "")
-                    .font(.footnote)
+                    .foregroundColor(.primaryTextColor)
+                    .font(.subHeader.bold())
             }
             Spacer(minLength: 15)
         }

@@ -6,7 +6,7 @@
 //
 
 
-
+//MARK: Home Model
 nonisolated struct Home: Sendable {
     let title: String
 }

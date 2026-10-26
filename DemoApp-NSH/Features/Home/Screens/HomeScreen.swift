@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: - Home
 struct HomeScreen: View {
     @State private var viewModel = HomeViewModel.init()
     var body: some View {
@@ -15,9 +16,10 @@ struct HomeScreen: View {
             case let .loaded(value):
                 ScrollView {
                     Text(value.title)
-                        .font(.headline)
+                        .foregroundColor(.primaryTextColor)
+                        .font(.header.bold())
                 }
-                .navigationTitle(AppTab.home.title)
+                .navigationBar(title: AppTab.home.title, isDetails: false)
             default: EmptyView()
             }
         }

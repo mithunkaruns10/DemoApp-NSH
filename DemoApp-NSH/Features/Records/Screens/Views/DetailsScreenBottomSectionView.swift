@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+//MARK: Details Screen - bottom section
 struct DetailsScreenBottomSectionView: View {
     let observations: [LabObservation]
     var body: some View {
         if observations.isEmpty {
             Text("No results found.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.primaryTextColor)
+                .font(.header)
         } else {
             ForEach(observations, id: \.self) { observation in
                 DetailsScreenBottomSectionItem(observation: observation)
@@ -30,7 +31,8 @@ struct DetailsScreenBottomSectionItem: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 15) {
                 Text(observation.name)
-                    .font(.headline)
+                    .foregroundColor(.primaryTextColor)
+                    .font(.header)
                 DetailsLabeledValue(
                     label: "Result:",
                     value: observation.value ?? "--"
@@ -56,9 +58,11 @@ private struct DetailsLabeledValue: View {
     var body: some View {
         HStack(spacing: 5) {
             Text(label)
-                .font(.subheadline.bold())
+                .foregroundColor(.primaryTextColor)
+                .font(.subHeader.bold())
             Text(value)
-                .font(.subheadline)
+                .foregroundColor(.primaryTextColor)
+                .font(.subHeader)
         }
     }
 }
