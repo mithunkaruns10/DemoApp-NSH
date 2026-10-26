@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @State private var viewModel = HomeViewModel.init()
     var body: some View {
         NavigationStack {
-            ScrollView {
-                Text("Demo App")
-                    .font(.headline)
+            switch viewModel.state {
+            case let .loaded(value):
+                ScrollView {
+                    Text(value.title)
+                        .font(.headline)
+                }
+                .navigationTitle(AppTab.home.title)
+            default: EmptyView()
             }
-            .navigationTitle(AppTab.home.title)
         }
     }
 }

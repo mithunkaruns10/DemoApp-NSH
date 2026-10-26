@@ -11,7 +11,7 @@ import FMCore
 
 nonisolated struct Report: Sendable {
     let diagnosticReports: [DiagnosticReport]
-    let observation: [Observation]
+    let observations: [Observation]
     
     
     ///Helper to parse the FHIR data
@@ -38,12 +38,12 @@ nonisolated struct Report: Sendable {
                     $0.get(if: Observation.self)
                 } ?? []
             }
-            return Report(diagnosticReports: diagnosticReport, observation: observarion + contained)
+            return Report(diagnosticReports: diagnosticReport, observations: observarion + contained)
         case let .diagnosticReport(diagnosticReport):
             let contained = diagnosticReport.contained?.compactMap {
                 $0.get(if: Observation.self)
             } ?? []
-            return Report(diagnosticReports: [diagnosticReport], observation: contained)
+            return Report(diagnosticReports: [diagnosticReport], observations: contained)
         default:
             throw FHIRNetworkError.unknown("Unexpected type")
         }

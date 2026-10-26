@@ -25,8 +25,8 @@ struct RecordsScreen: View {
                     switch route {
                     case .labAndDiagnostic:
                         LabAndDiagnosticListScreen(path: $path)
-                    case .recordsDetails:
-                        RecordDetailsScreen()
+                    case let .recordsDetails(report):
+                        RecordDetailsScreen(labReport: report)
                     }
                 }
                 .toolbar(.hidden, for: .tabBar)

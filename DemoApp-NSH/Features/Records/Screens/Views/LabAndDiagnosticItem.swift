@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct LabAndDiagnosticItem: View {
+    let labReport: LabReport
     let onTap: ()-> Void
+    
     var body: some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 15) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Title")
+                    Text(labReport.title)
                         .font(.headline)
-                    Text("Subtitle")
+                    Text("Diagnostic Report")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-                Text("Mar 04, 2011")
+                Text(labReport.date?.toMMMMddyyyyFormat ?? "")
                     .font(.footnote)
             }
             Spacer(minLength: 15)
@@ -33,5 +35,18 @@ struct LabAndDiagnosticItem: View {
 }
 
 #Preview {
-    LabAndDiagnosticItem(onTap: {})
+    LabAndDiagnosticItem(
+        labReport: .init(
+            id: "",
+            title: "Test",
+            date: Date(),
+            performer: "ABC Lab",
+            obsercations: [.init(
+                id: "",
+                name: "Ob1",
+                value: "test",
+                normalRange: "10-15"
+            )]),
+        onTap: {}
+    )
 }

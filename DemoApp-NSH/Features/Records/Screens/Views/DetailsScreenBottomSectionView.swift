@@ -8,46 +8,70 @@
 import SwiftUI
 
 struct DetailsScreenBottomSectionView: View {
+    let observations: [LabObservation]
     var body: some View {
-        ForEach(0..<3) {_ in
-            DetailsScreenBottomSectionItem()
+        if observations.isEmpty {
+            Text("No results found.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        } else {
+            ForEach(observations, id: \.self) { observation in
+                DetailsScreenBottomSectionItem(observation: observation)
+            }
         }
     }
 }
 
 
 struct DetailsScreenBottomSectionItem: View {
+    let observation: LabObservation
+    
     var body: some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 15) {
-                Text("Title")
+                Text(observation.name)
                     .font(.headline)
-                HStack(spacing: 5) {
-                    Text("Subtitle:")
-                        .font(.subheadline.bold())
-                        .foregroundStyle(.secondary)
-                    Text("Subtitl")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                DetailsLabeledValue(
+                    label: "Result:",
+                    value: observation.value ?? "--"
+                )
+                if let referenceRange = observation.normalRange {
+                    DetailsLabeledValue(
+                        label: "Normal Range:",
+                        value: referenceRange
+                    )
                 }
-                HStack(spacing: 5) {
-                    Text("Subtitle:")
-                        .font(.subheadline.bold())
-                        .foregroundStyle(.secondary)
-                    Text("Subtitl")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                
             }
             Spacer(minLength: 15)
         }
         .padding(12)
         .background(.background, in: RoundedRectangle(cornerRadius: 16))
-        .frame(width: .infinity)
+    }
+}
+
+private struct DetailsLabeledValue: View {
+    let label: String
+    let value: String
+    
+    var body: some View {
+        HStack(spacing: 5) {
+            Text(label)
+                .font(.subheadline.bold())
+            Text(value)
+                .font(.subheadline)
+        }
     }
 }
 
 #Preview {
-    DetailsScreenBottomSectionView()
+    DetailsScreenBottomSectionView(
+        observations: [
+            .init(
+                id: "",
+                name: "Ob1",
+                value: "test",
+                normalRange: "10-15"
+            )
+        ]
+    )
 }

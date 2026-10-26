@@ -17,9 +17,9 @@ struct RecordsListItem: View {
                 .frame(width: 44, height: 44)
                 .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 10))
             VStack(alignment: .leading, spacing: 2) {
-                Text("Title")
+                Text("Lab and Diagnostic")
                     .font(.headline)
-                Text("Subtitle")
+                Text("Result for blood, urine, and general lab")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

@@ -15,10 +15,9 @@ nonisolated  struct FHIRClient: FHIRFetching, Sendable {
     
     ///Dependency injection 
     init(
-        headers: [String : String],
-        httpMethod: HTTPMethod,
-        load: @Sendable @escaping (URLRequest) async throws -> (Data, URLResponse
-        )
+        headers: [String : String] = [:],
+        httpMethod: HTTPMethod = .GET,
+        load: @Sendable @escaping (URLRequest) async throws -> (Data, URLResponse) = { try await URLSession.shared.data(for: $0)}
     ) {
         self.headers = headers
         self.httpMethod = httpMethod

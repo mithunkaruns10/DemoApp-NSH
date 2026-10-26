@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct RecordDetailsScreen: View {
+    let labReport: LabReport
     var body: some View {
             ScrollView {
                 VStack(spacing: 15) {
-                    DetailsScreenTopSectionView()
+                    DetailsScreenTopSectionView(labReport: labReport)
                     Divider()
-                    DetailsScreenBottomSectionView()
+                    DetailsScreenBottomSectionView(observations: labReport.obsercations)
                 }
                 .padding(.horizontal, 15)
             }
@@ -23,5 +24,20 @@ struct RecordDetailsScreen: View {
 }
 
 #Preview {
-    RecordDetailsScreen()
+    RecordDetailsScreen(
+        labReport: .init(
+            id: "",
+            title: "Test",
+            date: Date(),
+            performer: "ABC Lab",
+            obsercations: [
+                .init(
+                    id: "",
+                    name: "Ob1",
+                    value: "test",
+                    normalRange: "10-15"
+                )
+            ]
+        )
+    )
 }

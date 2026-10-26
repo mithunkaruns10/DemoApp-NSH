@@ -10,5 +10,5 @@ import Foundation
 //MARK: Router
 enum AppRoute: Hashable, Sendable {
     case labAndDiagnostic
-    case recordsDetails
+    case recordsDetails(report: LabReport)
 }
