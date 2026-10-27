@@ -9,4 +9,5 @@
 //MARK: - All HTTPMethods
 nonisolated enum HTTPMethod: String, Sendable {
     case GET = "GET"
+    case POST = "POST"
 }
