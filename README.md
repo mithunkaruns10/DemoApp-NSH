@@ -14,27 +14,35 @@ The deployment target is **iOS 17** since `@Observable` framework requires it an
 
 ### iOS 26
 
-HOME: ![Home](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=home.png)
-RECORDS: ![Recors](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=records.png)
-LAB AND DIAGNOSTIC: ![Lab and Diagnostic](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Lab%20and-,Diagnostic.png)
-LAB AND DIAGNOSTIC ERROR: ![Lab and Diagnostic Error (https://github.com/mithunkaruns10/DemoAppNSH/edit/master/README.md#:~:text=Lab%20and%20Diagnostic-,error,-retry.png)
-RECORD DETAILS: ![Record details](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Record-,details.png)
+***HOME:*** 
+<img width="1206" height="2622" alt="home" src="https://github.com/user-attachments/assets/901bb677-ca7b-48c5-9fc2-0b7ae4ecc551" />
+***RECORDS:*** 
+<img width="1206" height="2622" alt="records" src="https://github.com/user-attachments/assets/1aa3ef86-35b2-4d52-b336-83de87f9ba5b" />
+***LAB AND DIAGNOSTIC:***
+<img width="1206" height="2622" alt="Lab and Diagnostic" src="https://github.com/user-attachments/assets/bbffe7c6-36cb-4071-a15f-0ae3d0b9221f" />
+***LAB AND DIAGNOSTIC ERROR:*** 
+<img width="1206" height="2622" alt="Lab and Diagnostic error retry" src="https://github.com/user-attachments/assets/2690470f-e1e4-4b14-846b-0afe20820e0b" />
+***RECORD DETAILS:***
+<img width="1206" height="2622" alt="Record details" src="https://github.com/user-attachments/assets/90e17354-e2d0-41c9-98b9-14051fb54c6b" />
 
 ### Below iOS 26(iOS 17/18)
-
-HOME: ![Home](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Home.jpeg)
-RECORDS: ![Recors](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Records.jpeg)
-LAB AND DIAGNOSTIC: ![Lab and Diagnostic](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Lab%20and-,Diagnostic.jpeg)
-LAB AND DIAGNOSTIC ERROR: ![Lab and Diagnostic Error (https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Lab%20and%20Diagnostics-,loading.jpeg)
-RECORD DETAILS: ![Record details](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=Record-,details.jpeg)
+***HOME:*** 
+<img width="750" height="1334" alt="Home" src="https://github.com/user-attachments/assets/eaaf869c-b47d-4701-8f2a-0c07c43e00df" />
+***RECORDS:*** 
+<img width="750" height="1334" alt="Records" src="https://github.com/user-attachments/assets/d124cd24-1b30-4126-acfc-9df067f721c8" />
+***LAB AND DIAGNOSTIC:***
+<img width="750" height="1334" alt="Lab and Diagnostic" src="https://github.com/user-attachments/assets/ba35dd2a-00b7-4ab3-bc61-6b79cfd5c3dc" />
+***LAB AND DIAGNOSTIC ERROR:*** 
+<img width="750" height="1334" alt="Lab and Diagnostic error retry" src="https://github.com/user-attachments/assets/47cb18f8-d42c-4398-84ba-ce19930ac884" />
+***LAB AND DIAGNOSTIC LOADING:***
+<img width="750" height="1334" alt="Lab and Diagnostics loading" src="https://github.com/user-attachments/assets/1c566989-eee4-45ab-b042-ac78e35439f7" />
+***RECORD DETAILS:***
+<img width="750" height="1334" alt="Record details" src="https://github.com/user-attachments/assets/f5a5d244-96d0-401e-9d9b-2a4cacc730d0" />
 
 
 ### Demo Video
 
-A small demo of working of the App
-
-[Watch the Demo](https://github.com/mithunkaruns10/DemoApp-NSH/edit/master/README.md#:~:text=recording.mov)
-
+A small demo of working of the App can be found in ***screenshots/recording.MOV***
 
 ## Setup
 
