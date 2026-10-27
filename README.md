@@ -147,6 +147,6 @@ Work lives on **`master`**. I am the only contributor, so there are no feature b
 ---
 
 ## Trade-offs
-- **No repositor** - the view model talks to `FHIRFetching` directly. Extra indirection was not worth it for one endpoint.
+- **No repository** - the view model talks to `FHIRFetching` directly. Extra indirection was not worth it for one endpoint.
 - **Mapping is tested through the view model**, not with separate mapper tests. The success test still asserts mapped fields.
 ___
