@@ -50,7 +50,7 @@ struct RecordsViewModelTests {
     }
     
     //Test Lab and Diagnostic report failure
-    @Test func loadFailedDiagnosticRepost() async {
+    @Test func loadFailedDiagnosticReport() async {
         let viewModel = RecordsViewModel(
             endPoint: .diagnosticReport,
             client: MockReportFetching(result: .failure(FHIRNetworkError.statusCode(500, Data())))
@@ -60,6 +60,8 @@ struct RecordsViewModelTests {
         #expect(viewModel.state == .failed("Something went wrong, Please try again"))
     }
         
+    
+    
     //MARK: MOCK Data
   static  let mockData = Data (
         """

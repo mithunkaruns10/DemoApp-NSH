@@ -1,5 +1,5 @@
 //
-//  Records.swift
+//  Report.swift
 //  DemoApp-NSH
 //
 //  Created by Mithun Karun Suma on 25/10/26.
@@ -58,11 +58,4 @@ nonisolated extension FHIRFetching {
     }
 }
 
-//MARK: Mock for Unit testing
-nonisolated struct MockReportFetching: FHIRFetching {
-    let result: Result<Data, any Error>
-    func data(from url: URL) async throws -> Data {
-        try result.get()
-    }
-    
-}
+

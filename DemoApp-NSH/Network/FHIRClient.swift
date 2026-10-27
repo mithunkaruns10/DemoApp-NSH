@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - Network client - API Calls
 nonisolated  struct FHIRClient: FHIRFetching, Sendable {
-    var headers: [String: String]
+    let headers: [String: String]
     let httpMethod: HTTPMethod
     private let load: @Sendable (URLRequest) async throws -> (Data, URLResponse)
     

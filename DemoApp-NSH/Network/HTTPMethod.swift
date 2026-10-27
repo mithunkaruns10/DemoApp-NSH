@@ -7,6 +7,6 @@
 
 
 //MARK: - All HTTPMethods
-public nonisolated enum HTTPMethod: String, Sendable {
+nonisolated enum HTTPMethod: String, Sendable {
     case GET = "GET"
 }

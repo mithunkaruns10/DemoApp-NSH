@@ -6,9 +6,6 @@
 //
 
 import Foundation
-import ModelsR4
-import FMCore
-
 
 //MARK: Protocol to decode required R4 model
 nonisolated protocol FHIRFetching: Sendable {

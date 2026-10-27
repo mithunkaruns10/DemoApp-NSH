@@ -9,8 +9,10 @@ import Foundation
 import Observation
 
 //MARK: - Observable Records viewModel
+
+@MainActor
 @Observable
-final class RecordsViewModel: Sendable {
+final class RecordsViewModel {
     
     private(set) var state: AppUIState<[LabReport]> = .loading
     
@@ -33,6 +35,7 @@ final class RecordsViewModel: Sendable {
         do {
             guard let url = endPoint.url else {
                assertionFailure("Invalid Url")
+                state = .failed("Invalid Url")
                 return
             }
             let results = try await  client.reports(from: url)

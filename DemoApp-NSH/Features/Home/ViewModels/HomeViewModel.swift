@@ -9,8 +9,10 @@ import Foundation
 import Observation
 
 //MARK: Home ViewModel
+
+@MainActor
 @Observable
-final class  HomeViewModel: Sendable {
+final class  HomeViewModel {
     private(set) var state: AppUIState<Home> = .loading
     
     init(state: AppUIState<Home> = .loaded(.init(title: "Demo App"))) {

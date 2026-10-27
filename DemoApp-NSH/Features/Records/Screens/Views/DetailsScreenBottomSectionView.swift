@@ -16,7 +16,7 @@ struct DetailsScreenBottomSectionView: View {
                 .foregroundColor(.primaryTextColor)
                 .font(.header)
         } else {
-            ForEach(observations, id: \.self) { observation in
+            ForEach(observations) { observation in
                 DetailsScreenBottomSectionItem(observation: observation)
             }
         }

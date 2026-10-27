@@ -15,9 +15,11 @@ struct AppNavigationBar: ViewModifier {
     private static let  cornerRadius: CGFloat = 15
     
     func body(content: Content) -> some View {
-        content
-            .navigationTitle(title)
-            .toolbarTitleDisplayMode(isDetails ? .inline : .inlineLarge)
+            navigationTitle(
+                title: title,
+                isDetails: isDetails,
+                content: content
+            )
             .toolbarColorScheme(.dark, for: .navigationBar)
             .safeAreaInset(edge: .top) {
                 Color.clear.frame(height: Self.cornerRadius)
@@ -34,6 +36,31 @@ struct AppNavigationBar: ViewModifier {
     }
 }
 
+///Helper to handle version below & above iOS 26.0
+@ViewBuilder
+private func navigationTitle(title: String, isDetails: Bool, content: some View) ->  some View {
+    if #available(iOS 26.0, *) {
+        content
+            .navigationTitle(title)
+            .toolbarTitleDisplayMode(isDetails ? .inline : .inlineLarge)
+    } else {
+        content
+            .navigationTitle(title)
+            .toolbarTitleDisplayMode(isDetails ? .inline : .inlineLarge)
+            .toolbarBackground(Color.appColor, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbar {
+                if isDetails {
+                    ToolbarItem(placement:.principal) {
+                        Text(title)
+                            .font(isDetails ? .header.weight(.semibold) : .subHeader.weight(.semibold))
+                            .foregroundColor(.white)
+                            .lineLimit(1)
+                    }
+                }
+            }
+    }
+}
 
 extension View {
     func navigationBar(title: String, isDetails: Bool) -> some View {

@@ -6,7 +6,7 @@
 //
 
 //MARK: Tab selection handling
-public enum AppTab: String, Sendable, Hashable {
+enum AppTab: String, Sendable, Hashable {
     case home, records
     
     init?(rawIndex: Int) {

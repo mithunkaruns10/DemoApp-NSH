@@ -23,8 +23,8 @@ struct LabAndDiagnosticListScreen: View {
             .onChange(of: viewModel.state, perform: { state in
                 if  case .failed = state { showAlert = true }
             })
-            .onAppear {
-                Task { await viewModel.load() }
+            .task {
+                await viewModel.load()
             }
         }
         .navigationBar(title: "Lab and Diagnostics", isDetails: true)
@@ -57,7 +57,7 @@ struct MainContent: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         case let .loaded(labReports):
             VStack(alignment: .leading, spacing: 15) {
-                ForEach(labReports, id: \.self) { report in
+                ForEach(labReports) { report in
                     LabAndDiagnosticItem(labReport:report) {
                         path.append(.recordsDetails(report: report))
                     }
@@ -74,8 +74,10 @@ struct MainContent: View {
                 }
             }
             
-        case .failed(_):
-            EmptyView()
+        case let .failed(message):
+           Text(message)
+                .font(.header)
+                .foregroundColor(.primaryTextColor)
         }
     }
 }

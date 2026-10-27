@@ -12,7 +12,7 @@ struct RecordsListItem: View {
     let onTap: ()-> Void
     
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 15) {
             Image(AppIcon.lab)
                 .resizable()
                 .frame(width: 44, height: 44)

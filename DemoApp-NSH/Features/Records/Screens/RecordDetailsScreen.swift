@@ -21,7 +21,7 @@ struct RecordDetailsScreen: View {
             }
             .padding(.horizontal, 15)
         }
-        .navigationBar(title: "Complete blood count", isDetails: true)
+        .navigationBar(title: labReport.title, isDetails: true)
         .navigationBarBackButtonHidden(true)
         .appBackButton()
     }
