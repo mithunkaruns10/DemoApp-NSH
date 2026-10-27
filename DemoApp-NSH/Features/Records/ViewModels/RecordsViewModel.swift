@@ -34,8 +34,8 @@ final class RecordsViewModel {
         state = .loading
         do {
             guard let url = endPoint.url else {
-               assertionFailure("Invalid Url")
                 state = .failed("Invalid Url")
+                assertionFailure("Invalid Url")
                 return
             }
             let results = try await  client.reports(from: url)

@@ -18,6 +18,7 @@ struct HomeScreen: View {
                     Text(value.title)
                         .foregroundColor(.primaryTextColor)
                         .font(.header.bold())
+                        .containerRelativeFrame(.horizontal)
                 }
                 .navigationBar(title: AppTab.home.title, isDetails: false)
             default: EmptyView()

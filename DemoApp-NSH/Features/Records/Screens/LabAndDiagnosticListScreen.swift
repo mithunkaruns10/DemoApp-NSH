@@ -33,7 +33,9 @@ struct LabAndDiagnosticListScreen: View {
             Button("Retry") {
                 Task { await viewModel.load() }
             }
-            Button("Cancel", role: .cancel, action: {})
+            Button("Cancel", role: .cancel, action: {
+                dismiss()
+            })
         } message: {
             if case let .failed(message) = viewModel.state {
                 Text(message)
