@@ -132,6 +132,12 @@ Run with ⌘U in Xcode.
 
 ---
 
+## Git
+
+Work lives on **`master`**. I am the only contributor, so there are no feature branches — each commit was made directly on `master` as the UI, network layer, mapping, and tests landed.
+
+---
+
 ## Trade-offs
 - **No repositor** - the view model talks to `FHIRFetching` directly. Extra indirection was not worth it for one endpoint.
 - **Mapping is tested through the view model**, not with separate mapper tests. The success test still asserts mapped fields.
