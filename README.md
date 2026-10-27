@@ -1,13 +1,13 @@
 # DemoApp-NSH
 A simple iOS application that displays two tabs Home and Report. The Report tab displays a Diagnostic Report (Laboratory report - Hematology) for a patient.
 
-**Minimum iOS version:** 17.0
-**Language:** Swift, SwiftUI
-**Xcode version:** 26 or later (Xcode 26 is used for development, could not update it to 27 since low disc space in Mac)
+- **Minimum iOS version:** 17.0
+- **Language:** Swift, SwiftUI
+- **Xcode version:** 26 or later (Xcode 26 is used for development, could not update it to 27 since low disc space in Mac)
 
 The deployment target is **iOS 17** since `@Observable` framework requires it and Apple's FHIRModels package is integrated against that baseline.
 
-***Liquid Glass** designs changes will be applied automatically if run in iOS 26 and above
+***Liquid Glass*** designs changes will be applied automatically if run in iOS 26 and above
 ---
 
 ## Screenshots
@@ -89,18 +89,18 @@ DemoApp-NSHTests/        View-model and date tests + mocks
 
 The app uses Apple’s **FHIRModels** (`ModelsR4` 0.9.3), not a hand-rolled Codable FHIR graph.
 
-`JSONDecoder.fhirModelsReadyDecoder()` - Decode FHIR JSON
-`ResourceProxy` - Accept a Bundle or a standalone DiagnosticReport
-`DiagnosticReport`, `Observation`, `CodeableConcept`, `Quantity`, `Reference` - Data types for mapping
+- `JSONDecoder.fhirModelsReadyDecoder()` - Decode FHIR JSON
+- `ResourceProxy` - Accept a Bundle or a standalone DiagnosticReport
+- `DiagnosticReport`, `Observation`, `CodeableConcept`, `Quantity`, `Reference` - Data types for mapping
 
 ## Design patterns
 
-**MVVM** - Screens observe view models; views do not call `URLSession`
-**Protocol-oriented dependency injection** - `FHIRFetching` + client injected in `RecordsViewModel.init`(make it testable)
-**Mapper** - FHIR R4 → app models in `LabReportMapper`
-**Feature modules** - `Features/Home`, `Features/Records`
-**Coordinator-style routing** - `NavigationStack` + `AppRoute` / `AppTab`
-**state** - `AppUIState` drives loading, list, and error UI
+- **MVVM** - Screens observe view models; views do not call `URLSession`
+- **Protocol-oriented dependency injection** - `FHIRFetching` + client injected in `RecordsViewModel.init`(make it testable)
+- **Mapper** - FHIR R4 → app models in `LabReportMapper`
+- **Feature modules** - `Features/Home`, `Features/Records`
+- **Coordinator-style routing** - `NavigationStack` + `AppRoute` / `AppTab`
+- **state** - `AppUIState` drives loading, list, and error UI
 
 
 ## Coding standards and best practices
